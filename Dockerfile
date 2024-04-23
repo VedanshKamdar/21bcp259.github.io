@@ -10,11 +10,11 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy remaining frontend code
+# Copy backend code
 COPY . .
 
-# Expose React development server port (default 3000)
-EXPOSE 3000
+# Expose backend server port (adjust based on your application)
+EXPOSE 5000
 
-# Start the React development server (adjust command if using Create React App)
-CMD [ "npm", "start" ]
+# Start the Node.js backend server (adjust command based on your entry point)
+CMD [ "node", "server.js" ]
